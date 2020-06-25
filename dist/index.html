@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <div class=""> <section> 
+                <h1>Natural Language Processing (NLP)</h1>
+                <p>Natural language processing (NLP) is a branch of artificial intelligence that helps computers understand, interpret and manipulate human language. NLP draws from many disciplines, including computer science and computational linguistics, in its pursuit to fill the gap between human communication and computer understanding.</p></section>
+                <section>
+                <h1>Aylien Text Analysis</h1><p>The Aylien Text Analysis API provides powerful and flexible AI-driven content analysis solutions that bring the power of NLP to the masses. We help developers, data scientists, and marketers understand human-generated textual content at scale.</p></section>
+            </div>
+            <div class="">
+                Refresh
+            </div>
+        </header>
+
+        <main>
+            <section>
+            <form class="body main" onsubmit="return Client.handleSubmit(event)"><p>Try inputting in the url of an article you like - from your favorite news source</p>
+                <h2 id="error"></h2>
+            <input id="name" type="text" name="input" value="" onblur="" placeholder="https://....">
+            <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <ul>
+                  <li>
+                    <h3>Text Polarity-: <span id="url_polarity"> </span></h3>                    
+                    <h4>Confidence-: <span id="url_polarity_confidence"></span></h4>                   
+                  </li>
+
+                  <li>
+                    <h3>Text Subjectivity-: <span id="url_subjectivity"></span></h3>                    
+                    <h4>Confidence-: <span id="url_subjectivity_confidence"></span></h4>                 
+                  </li>
+
+                  <li>
+                    <h3>Text Excerpt-: </h3>  
+                    <p id="url_excerpt"></p>                  
+                  </li>
+                </ul> 
+                <div id="url_results"></div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <h3>This is a footer</h3>
+        </footer>
+
+    <script type="text/javascript" src="bundle.min.js"></script></body>
+    <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+</html>
